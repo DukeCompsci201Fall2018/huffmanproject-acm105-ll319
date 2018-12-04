@@ -60,7 +60,7 @@ public class HuffProcessor {
 	 */
 	public void decompress(BitInputStream in, BitOutputStream out){
 		int bits = in.readBits(BITS_PER_INT);
-		System.out.println(bits);
+		//System.out.println(bits);
 		if (bits != HUFF_TREE) 
 			throw new HuffException("illegal header starts with "+bits);
 		HuffNode root = readTreeHeader(in);
